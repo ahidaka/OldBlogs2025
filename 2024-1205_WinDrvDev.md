@@ -14,7 +14,24 @@ SDK新機能
 
 WDK新機能
 
+WDK VSIX がインストールされていないコンピューターに WDK MSI をインストールしようとすると、インストールの開始時に次の警告メッセージが表示されます。
+
+![インストールの開始時警告](img/install_wdk_vsix_msg-35.png)
+
 ## BCDEdit 裏技紹介
+
+
+## 究極の裏技
+
+
+bcdedit /copy {current} /d "Windows 11 Debug"
+ebug エントリーをコピー作成語、セキュアブート無効化（再起動）
+
+msconfig を起動して Debug エントリーをデフォルト設定して、再起動
+
+bcdedit /set {current} testsigning on
+設定して再起動
+
 
 UMDF2
 ユーザーモードドライバーの動作確認
@@ -44,8 +61,6 @@ BCEのエントリーで、オプションで起動すると、「ドライバ�
 ３. 再起動して動作確認
 
 
-
-
 ## 関連情報
 
 32bitのドライバーは開発して、実験できるか？
@@ -59,4 +74,8 @@ SDK
 WDK
 
  24H2の新機能を整理して紹介は別にする！
+
+https://learn.microsoft.com/en-us/windows-hardware/drivers/wdk-release-notes
+
+https://learn.microsoft.com/ja-jp/windows-hardware/drivers/wdk-release-notes
 
